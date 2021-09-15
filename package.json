@@ -1,6 +1,6 @@
 {
   "name": "vue2-external-component",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Vue2 external component import (from remote server)",
   "main": "index.js",
   "scripts": {

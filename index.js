@@ -1,4 +1,4 @@
-export async function externalComponent(name, url) {
+export async function externalComponent(url) {
   const name = url.split('/').reverse()[0].match(/^(.*?)\./)[1];
   if (window[name]) return window[name];
 
