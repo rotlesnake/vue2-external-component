@@ -1,0 +1,19 @@
+{
+  "name": "vue2-external-component",
+  "version": "1.0.0",
+  "description": "Vue2 external component import (from remote server)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rotlesnake/vue2-external-component.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rotlesnake/vue2-external-component/issues"
+  },
+  "homepage": "https://github.com/rotlesnake/vue2-external-component#readme"
+}
