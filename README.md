@@ -8,7 +8,8 @@ $ npm install vue2-external-component
 ## Example:
 ```vue
 <template>
-    <MyComponent />
+    <MyComponent1 />
+    <MyComponent2 />
 </template>
 
 <script>
@@ -17,7 +18,8 @@ externalCSS("https://...../my-component.css");
 
 export default {
   components: {
-    MyComponent:()=>externalComponent("https://...../my-component.js"),
+    MyComponent1:()=>externalComponent("https://...../my-component.js"),
+    MyComponent2:()=>externalComponent("https://...../my-component.php", "component2"),
   },
 };
 </script>

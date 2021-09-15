@@ -1,12 +1,13 @@
-export async function externalComponent(url) {
+export async function externalComponent(url, exportName) {
   const name = url.split('/').reverse()[0].match(/^(.*?)\./)[1];
-  if (window[name]) return window[name];
+  exportName = exportName || name;
+  if (window[exportName]) return window[exportName];
 
-  window[name] = new Promise((resolve, reject) => {
+  window[exportName] = new Promise((resolve, reject) => {
     const script = document.createElement('script');
     script.async = true;
     script.addEventListener('load', () => {
-      resolve(window[name]);
+      resolve(window[exportName]);
     });
     script.addEventListener('error', () => {
       reject(new Error(`Error loading ${url}`));
@@ -15,7 +16,7 @@ export async function externalComponent(url) {
     document.head.appendChild(script);
   });
 
-  return window[name];
+  return window[exportName];
 }
 
 export function externalCSS(url) {
