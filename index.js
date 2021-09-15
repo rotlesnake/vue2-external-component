@@ -1,5 +1,5 @@
-export async function externalComponent(url) {
-  const name = 'external-'+url.split('/').reverse()[0].match(/^(.*?)\.js/)[1].replace(/\./g,'-');
+export async function externalComponent(name, url) {
+  const name = url.split('/').reverse()[0].match(/^(.*?)\./)[1];
   if (window[name]) return window[name];
 
   window[name] = new Promise((resolve, reject) => {
